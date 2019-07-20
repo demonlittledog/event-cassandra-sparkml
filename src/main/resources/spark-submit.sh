@@ -1,0 +1,3 @@
+spark-submit --class com.it21learning.Driver --conf spark.driver.extraJavaOptions=-XX:+UseG1GC --conf spark.executor.extraJavaOptions=-XX:+UseG1GC --conf spark.sql.autoBroadcastJoinThreshold=-1 --conf spark.streaming.kafka.consumer.cache.enabled=false --jars mysql-connector-java.jar event-ml-cassandra-assembly-0.1.jar
+
+spark-submit --class com.it21learning.SinkDriver --conf spark.driver.extraJavaOptions=-XX:+UseG1GC --conf spark.executor.extraJavaOptions=-XX:+UseG1GC --conf spark.sql.autoBroadcastJoinThreshold=-1 --conf spark.streaming.kafka.consumer.cache.enabled=false --jars spark-cassandra-connector_2.11-2.0.8.jar,jsr,jsr166e-1.1.0.jar,commons-pool2-2.0.jar,mysql-connector-java.jar event-ml-cassandra-assembly-0.1.jar

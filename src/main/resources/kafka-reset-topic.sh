@@ -1,0 +1,1 @@
+kafka-streams-application-reset.sh --zookeeper sandbox-hdp.hortonworks.com:2181 --bootstrap-servers sandbox-hdp.hortonworks.com:6667 --application-id grpTests --input-topics test
